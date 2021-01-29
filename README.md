@@ -18,6 +18,9 @@ A program that captures and condenses the key moments from a video and summarise
 
 ## Resources
 -- Add all the resources to be referred.
+   
+   SumMe Datset:
+   https://gyglim.github.io/me/papers/GygliECCV14_vsum.pdf
 
 ## Work Distributions
 -- LSTM -> Kunal,Rishu,Aryan,Nitin 
