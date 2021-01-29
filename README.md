@@ -20,6 +20,7 @@ A program that captures and condenses the key moments from a video and summarise
 -- Add all the resources to be referred.
 
 ## Work Distributions
+-- LSTM -> Kunal,Rishu,Aryan 
 -- Work -->People Assigned
 -- Currently Free(Completed tasks) --> People(Can be assigned to other tasks)
 
