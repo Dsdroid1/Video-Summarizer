@@ -21,8 +21,8 @@ A program that captures and condenses the key moments from a video and summarise
 
 ## Work Distributions
 -- LSTM -> Kunal,Rishu,Aryan,Nitin 
--- GAN  -> Dhruv,____,___
--- FCSN/Any other pick -> Kartik,____,_______
+-- GAN  -> Dhruv,Chinmay,Suhrid
+-- FCSN/Any other pick -> Kartik,Karan,Ninad
 -- Work -->People Assigned
 -- Currently Free(Completed tasks) --> People(Can be assigned to other tasks)
 
