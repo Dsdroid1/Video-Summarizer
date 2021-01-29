@@ -16,3 +16,35 @@ A program that captures and condenses the key moments from a video and summarise
     - [ ] Step 3.2 of project
 - [ ] Step 4 of project
 
+## Resources
+-- Add all the resources to be referred.
+
+## Work Distributions
+-- Work -->People Assigned
+-- Currently Free(Completed tasks) --> People(Can be assigned to other tasks)
+
+## Contributions
+Follow such format,just summarise a contrib
+# Week X
+Dhruv:
+Kartik:
+Kunal:
+Aryan:
+Nitin:
+Ninad:
+Karan:
+Rishu:
+Chinmay:
+Suhrid:
+
+# Week X-1
+Dhruv:
+Kartik:
+Kunal:
+Aryan:
+Nitin:
+Ninad:
+Karan:
+Rishu:
+Chinmay:
+Suhrid:
