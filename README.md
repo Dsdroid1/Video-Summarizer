@@ -25,15 +25,16 @@ A program that captures and condenses the key moments from a video and summarise
    GAN Course:(Just skim through to get an understanding)
    https://www.coursera.org/learn/build-basic-generative-adversarial-networks-gans
    \
-   Paper Implementation(LSTM+GAN)
+   Paper Implementation(LSTM+GAN):
    https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj9hZ_J6MLuAhXVzjgGHRurC64QFjAAegQIARAC&url=https%3A%2F%2Fopenaccess.thecvf.com%2Fcontent_cvpr_2017%2Fpapers%2FMahasseni_Unsupervised_Video_Summarization_CVPR_2017_paper.pdf&usg=AOvVaw2KRQvJbh7Vp-ZduiqGInG5
 
+\
+
 ## Work Distributions
--- LSTM -> Kunal,Rishu,Aryan,Nitin 
--- GAN  -> Dhruv,Chinmay,Suhrid
--- FCSN/Any other pick -> Kartik,Karan,Ninad
--- Work -->People Assigned
--- Currently Free(Completed tasks) --> People(Can be assigned to other tasks)
+-- LSTM -> Kunal,Rishu,Aryan,Nitin \
+-- GAN  -> Dhruv,Chinmay,Suhrid \
+-- FCSN/Any other pick -> Kartik,Karan,Ninad    \
+-- Currently Free(Completed tasks) --> None(Can be assigned to other tasks)   \
 
 ## Contributions
 Follow such format,just summarise a contrib
