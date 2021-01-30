@@ -21,6 +21,12 @@ A program that captures and condenses the key moments from a video and summarise
    
    SumMe Dataset:
    https://gyglim.github.io/me/papers/GygliECCV14_vsum.pdf
+   \
+   GAN Course:(Just skim through to get an understanding)
+   https://www.coursera.org/learn/build-basic-generative-adversarial-networks-gans
+   \
+   Paper Implementation(LSTM+GAN)
+   https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj9hZ_J6MLuAhXVzjgGHRurC64QFjAAegQIARAC&url=https%3A%2F%2Fopenaccess.thecvf.com%2Fcontent_cvpr_2017%2Fpapers%2FMahasseni_Unsupervised_Video_Summarization_CVPR_2017_paper.pdf&usg=AOvVaw2KRQvJbh7Vp-ZduiqGInG5
 
 ## Work Distributions
 -- LSTM -> Kunal,Rishu,Aryan,Nitin 
@@ -33,25 +39,25 @@ A program that captures and condenses the key moments from a video and summarise
 Follow such format,just summarise a contrib
 
 # Week X
-Dhruv:
-Kartik:
-Kunal:
-Aryan:
-Nitin:
-Ninad:
-Karan:
-Rishu:
-Chinmay:
-Suhrid:
+Dhruv:\
+Kartik:\
+Kunal:\
+Aryan:\
+Nitin:\
+Ninad:\
+Karan:\
+Rishu:\
+Chinmay:\
+Suhrid:\
 
 # Week X-1
-Dhruv:
-Kartik:
-Kunal:
-Aryan:
-Nitin:
-Ninad:
-Karan:
-Rishu:
-Chinmay:
-Suhrid:
+Dhruv:\
+Kartik:\
+Kunal:\
+Aryan:\
+Nitin:\
+Ninad:\
+Karan:\
+Rishu:\
+Chinmay:\
+Suhrid:\
