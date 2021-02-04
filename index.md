@@ -4,7 +4,9 @@ A program that captures and condenses the key moments from a video and summarise
 ## Week 1 (31st Jan - 6th Feb) : Get to know about existing models that are used for video summarisation
 ### Currently Assigned topics to study:
 LSTM -> Kunal,Nitin,Rishu,Aryan
+\
 GAN  -> Dhruv,Suhrid,Chinmay
+\
 FCSN -> Kartik,Ninad,Karan
 
 ## Welcome to GitHub Pages
