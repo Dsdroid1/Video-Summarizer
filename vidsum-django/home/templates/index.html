@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VID-SUM</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!--Bootstrap CDN-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+
+    </head>
+    <body>
+        <div class="container">
+            <h3>Summarize your Video</h3>
+            <form class="form-group" id="submit-form" action="" method="POST">
+                {%csrf_token%}
+                <input class="form-control" id="link" type="text" name="link", placeholder="paste youtube link here" />
+                <button class="btn btn-primary" type="submit">Summarize</button>
+            </form>
+
+            <div id= "spinner" class="spinner-border text-success">
+    
+            </div>
+
+            <div id="alertbox" class="alert alert-info">
+                <a id="outputlink" href="#">summarized video</a>
+            </div>
+            
+        </div>
+      
+
+
+
+        <script>
+            $("#submit-form").submit(function () {
+                
+                spinner = $("#spinner");
+                spinner.css({'display':'block'});
+
+                alertbox = $("#alertbox");
+                alertbox.css({'display':'none'});
+                outputlink = $("#outputlink");
+
+                form = $("#submit-form");
+                form.css({'display':'none'});
+
+                const received_link = $("#link").val();
+    
+                $.ajax({
+                type: "POST",
+                url: "/home/summarize/",
+                data: {
+                    'link': received_link
+                },
+                success: function (data) {
+
+                    link = data.result;
+
+                    link = '/'+link;
+
+                    spinner.css({'display':'none'});
+                    form.css({'display':'block'});
+                    alertbox.css({'display':'block'});
+
+                    outputlink.attr('href',link)
+                    console.log(data);
+                }
+                });
+                return false; 
+
+        
+        
+            });
+
+          </script>
+    </body>
+
+</html>

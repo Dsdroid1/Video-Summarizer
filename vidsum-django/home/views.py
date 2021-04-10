@@ -1,6 +1,12 @@
-#!/usr/bin/env python
 from __future__ import unicode_literals
+from django.http.response import HttpResponse, JsonResponse
+from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
+
+# Create your views here.
+
 import argparse
+import uuid
 import os
 import re
 from itertools import starmap
@@ -12,7 +18,7 @@ import chardet
 import nltk
 
 # imageio.plugins.ffmpeg.download()
-nltk.download('punkt')
+#nltk.download('punkt')
 
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 from sumy.parsers.plaintext import PlaintextParser
@@ -38,7 +44,7 @@ def summarize(srt_file, n_sentences, language="english"):
         index = int(re.findall("\(([0-9]+)\)", str(sentence))[0])
         item = srt_file[index]
         segment.append(srt_segment_to_range(item))
-    print(segment)
+    
     return segment
 
 
@@ -62,7 +68,7 @@ def srt_segment_to_range(item):
                     60 + item.start.seconds + item.start.milliseconds / 1000.0
     end_segment = item.end.hours * 60 * 60 + item.end.minutes * \
                   60 + item.end.seconds + item.end.milliseconds / 1000.0
-    print(start_segment, end_segment)
+    
     return start_segment, end_segment
 
 
@@ -73,7 +79,7 @@ def time_regions(regions):
 
 def find_summary_regions(srt_filename, duration=30, language="english"):
     # find important sections
-    srt_filename = "C:\\Users\\nitin\\PycharmProjects\\Gistly\\1.en.srt"
+    #srt_filename = "C:/Users/kumar/Desktop/mywork/vidsum/media/1.en.srt"
     srt_file = pysrt.open(srt_filename)
 
     enc = chardet.detect(open(srt_filename, "rb").read())['encoding']
@@ -112,31 +118,33 @@ def create_summary(filename, regions):
     return concatenate_videoclips(subclips)
 
 
-def get_summary(filename="1.mp4", subtitles="1.en.srt"):
+def get_summary(filename, subtitles):
     # abstract function
     regions = find_summary_regions(subtitles, 60, "english")
-    filename = "C:\\Users\\nitin\\PycharmProjects\\Gistly\\1.mp4"
     summary = create_summary(filename, regions)
     base, ext = os.path.splitext(filename)
-    output = "{0}_1.mp4".format(base)
+    output = "{0}_summarized.mp4".format(base)
     summary.to_videofile(
         output,
         codec="libx264",
         temp_audiofile="temp.m4a", remove_temp=True, audio_codec="aac")
     return output
 
-
 def download_video_srt(url):
     # downloads specified Youtube video's subtitles as a vtt/srt file.
+
+    id = uuid.uuid1()
+
     ydl_opts = {
         'format': 'best',
-        'outtmpl': '1.%(ext)s',
+        'outtmpl': 'media/'+str(id)+'.%(ext)s',
         'subtitlesformat': 'srt',
         'writeautomaticsub': True,
         '--no-check-certificate': True,
         # 'allsubtitles': True # Get all subtitles
     }
 
+    print('yt function called')
     movie_filename = ""
     subtitle_filename = ""
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
@@ -150,12 +158,24 @@ def download_video_srt(url):
         subtitle_filename = movie_filename.replace(".mp4", ".%s.%s" %
                                                    (subtitle_language,
                                                     subtitle_ext))
+
+
+    print('video downloads')
+    print((movie_filename,subtitle_filename))
     return movie_filename, subtitle_filename
 
 
-def final(url):
-    movie_filename, subtitle_filename = download_video_srt(url)
-    summary_retrieval_process = multiprocessing.Process(target=get_summary,
-                                                        args=(movie_filename, subtitle_filename))
-    summary_retrieval_process.start()
-    summary_retrieval_process.join()
+@csrf_exempt
+def summarize_view(request):
+
+   link = request.POST.get("link")
+   print(link)
+   movie_filename, subtitle_filename = download_video_srt(link)
+   output = get_summary(movie_filename,subtitle_filename)
+
+   return JsonResponse({'result':output})
+
+
+def index(request):
+
+    return render(request,"index.html")
