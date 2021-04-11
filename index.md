@@ -58,7 +58,7 @@ This model uses general CV techniques to estimate the background in the video, a
     and your output will be in a file called filename.mp4 in the same directory.
 
   + One of the generated summary:\
-    ![Alt Text](https://github.com/Dsdroid1/Video-Summarizer/blob/main/background-estimation/filename.gif)
+    ![Alt Text](./videoGifs/filename.gif)
     
 
 *Until now, all models were either statistical or based on CV features and had some degree of manual setting to get best results.However ,we turn towards Machine Learnig in order to remove this human dependency*
