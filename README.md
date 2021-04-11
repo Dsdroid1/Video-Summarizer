@@ -19,6 +19,8 @@
 
 + **Trivial Video Summarisation:**  
 The video frames are analysed one by one and difference between the frames (in terms of color composition and spatial distance in the color space) is calculated, frame pairs with extreme values of these factors are then selected in the hope that they would either belong to start or end of individual scenes of a video and collated into one summary video.
+
 + **Generating summary on subtitles:**  
-The input program tries to extract the subtitles from the audio sample attached with the video and then uses Natural Language Processing to determine important time stamps in subtitles, and consequently audio to generate list of important blocks which are then coalesced into a single summarised video
+The input program tries to extract the subtitles from the audio sample attached with the video and then uses Natural Language Processing to determine important time stamps in subtitles, and consequently audio to generate list of important blocks which are then coalesced into a single summarised video. A prototype was also created using django framework.
+
 + **Generating summary based o **
