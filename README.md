@@ -23,6 +23,7 @@
 + **Models based on simple CV features**
   + `Image Histogram as a Feature over N frames`
   + `Video summarisation using Histogram and Spatial Distance measurement`
+  + `Video summarisation using Background estimation technique`
 
 + **Models based on Machine Learning techniques**
   + `Audio/Subtitle based (Different from considering just images)`
