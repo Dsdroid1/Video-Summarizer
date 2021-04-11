@@ -68,4 +68,4 @@ This model uses general CV techniques to estimate the background in the video, a
 + **`Generating summary on subtitles`** :  
 The input program tries to extract the subtitles from the audio sample attached with the video and then uses Natural Language Processing to determine important time stamps in subtitles and consequently audio to generate list of important blocks which are then coalesced into a single summarised video
   + One of the generated summary: \
-    ![summarized example](https://github.com/Dsdroid1/Video-Summarizer/blob/main/videoGifs/1.gif)
+    ![summarized example](./videoGifs/1.gif)
