@@ -15,7 +15,7 @@
 * [Ninad Dadmal (BT18CSE137)](https://github.com/Ninad10code)
 
 
-## We have made several models for our application which is video summarisation:
+## The following models showcase different methodologies to demonstrate Video Summarisation:
 + **Models based on observations and statistics (conditional models,do not generalize well,just as a basic attempt)**
   + `Random Frame from N-Frame window` 
   + `K-frames from a N-frame window`
