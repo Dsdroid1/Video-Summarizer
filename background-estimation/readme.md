@@ -10,5 +10,5 @@ It contains a jupyter notebook, just open the file and give the path of the vide
 *cap = cv2.VideoCapture('VIDEO_PATH_HERE')*
 and your output will be in a file called filename.mp4 in the same directory.
 
-
+## One of the generated summary
 ![Alt Text](https://github.com/Dsdroid1/Video-Summarizer/blob/main/background-estimation/filename.gif)
