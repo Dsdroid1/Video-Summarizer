@@ -25,3 +25,6 @@ FCSN -> Kartik,Ninad,Karan
 + **N Frame Histogram Summarisation**
 + **Histogram and Spatial distance**
 + **Summarisation using subtitles**
+
+## Cricket match summarized
+![summary](./videoGifs/1.gif)
