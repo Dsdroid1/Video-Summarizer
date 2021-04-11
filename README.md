@@ -41,4 +41,4 @@ Uptil now,all models were either statistical or based on CV features and had som
 
 + **Generating summary on subtitles:**  
 The input program tries to extract the subtitles from the audio sample attached with the video and then uses Natural Language Processing to determine important time stamps in subtitles, and consequently audio to generate list of important blocks which are then coalesced into a single summarised video
-+ Generating summary based 
++ **Generating summary based output**
