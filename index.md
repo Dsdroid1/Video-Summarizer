@@ -47,6 +47,9 @@ Now, to select frames, we compute a descriptor based on the properties of the im
 + **`Video summarisation using Histogram and Spatial Distance measurement`** :  
 Image features can be understood in two domains, a frequency domain, which can be accessed via the histogram, and a spatial domain which can be accesed via the raw bitmap of the frame. We use euclidean and cosine distance between pairs of frames to locate drastic changes in scene (either in spatial or frequency domain). These frames are then selected and colaesced into a summary video. This method works extremely well for presentations style videos which can be highly compressed into a selection of as lows as 3% of frames with minimal loss.
 
+  + One of the generated summary:\
+    ![Alt Text](./videoGifs/vidsum.gif)
+
 *In certain areas, such as a parking lot, we observed that the movement occurs in the foreground while the background remains static. This thought provoked us in building our next model:*
 
 + **`Video summarisation using Background estimation technique`** :
