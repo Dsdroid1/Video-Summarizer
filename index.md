@@ -20,3 +20,8 @@ LSTM -> Kunal,Nitin,Rishu,Aryan
 GAN  -> Dhruv,Suhrid,Chinmay
 \
 FCSN -> Kartik,Ninad,Karan
+
+## Techniques used:
++ **N Frame Histogram Summarisation**
++ **Histogram and Spatial distance**
++ **Summarisation using subtitles**
