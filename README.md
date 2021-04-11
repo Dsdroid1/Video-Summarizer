@@ -30,16 +30,15 @@ Thus, instead of randomly selecting few frames,we move on to much complex models
 Now, to select frames, we compute a descriptor based on the properties of the image(over time).A basic feature that comes to mind is the histogram of the image, which as we are aware, is also used to fetch similar images from an image query database(one of the methods is by comparing the histograms). Thus, we extend this idea to videos,claiming that if some sudden change appears in the image,then the histogram would significantly change.Hence we compute the correlation between 2 histograms, if similar then the image is probably similar to the earlier picked image,and hence need not be picked again.This is of course another primitive model,that is it is only suited well for videos with sudden changes to be summarized.To make it less computationally expensive,we average the image over N frames and then calculate the histogram,sacrificing accuracy over time.This has a threshold parameter for similarity,which has to be manually tweaked.
 
 + *Feature Vector(Convolutional part of an NN) Encoding of an images as a feature*
-+ *Suhrid wala model(histogram based,better one)*
++ *Video summarisation using Histogram and Spatial Distance measurement*  
+Image features can be understood in two domains, a frequency domain, which can be accessed via the histogram, and a spatial domain which can be accesed via the raw bitmap of the frame. We use euclidean and cosine distance between pairs of frames to locate drastic changes in scene (either in spatial or frequency domain). These frames are then selected and colaesced into a summary video. This method works extremely well for presentations style videos which can be highly compressed into a selection of as lows as 3% of frames with minimal loss.
 
 Uptil now,all models were either statistical or based on CV features and had some degree of manual setting to get best results.However , we turn to Machine Learnig in order to remove this human dependency
-+ ** ML based models**
-+ * LSTM Based *
-+ * Audio/Subtitle based (Different from considering just images)*
-+ * GAN based unsupervised learning*
++ *ML based models*
++ *LSTM Based*
++ *Audio/Subtitle based (Different from considering just images)*
++ *GAN based unsupervised learning*
 
-+ **Trivial Video Summarisation:**  
-The video frames are analysed one by one and difference between the frames (in terms of color composition and spatial distance in the color space) is calculated, frame pairs with extreme values of these factors are then selected in the hope that they would either belong to start or end of individual scenes of a video and collated into one summary video.
 + **Generating summary on subtitles:**  
 The input program tries to extract the subtitles from the audio sample attached with the video and then uses Natural Language Processing to determine important time stamps in subtitles, and consequently audio to generate list of important blocks which are then coalesced into a single summarised video
 + **Generating summary based o **
