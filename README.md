@@ -17,6 +17,21 @@
 
 ## We have made several models for our application which is video summarisation:
 + **Models based on observations and statistics (conditional models,do not generalize well,just as a basic attempt)**
+  + `Random Frame from N-Frame window` 
+  + `K-frames from a N-frame window`
+
++ **Models based on simple CV features**
+  + `Image Histogram as a Feature over N frames`
+  + `Video summarisation using Histogram and Spatial Distance measurement`
+
++ **Models based on Machine Learning techniques**
+  + `Audio/Subtitle based (Different from considering just images)`
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## We have made several models for our application which is video summarisation:
++ **Models based on observations and statistics (conditional models,do not generalize well,just as a basic attempt)**
 + `Random Frame from N-Frame window` :
 In this simple model, we take a window size of N frames, and randomly choose 1 frame to keep in the summary. This is a very basic estimate to create a summary. This assumes that the whole video is consisting of important events spanning over multiple frame(Preferrably >N), and selecting any one of those captures the essence of that event. Of course, this is an entirely situational model, but is helpful in downsizing the video in time dimension without changing its meaning much(with lower N values). Major Use Case: From a lecture,generate a summary of major ppt slides(short summary to know which topics were covered when by manually viewing it)
 
