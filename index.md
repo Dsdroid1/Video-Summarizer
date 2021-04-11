@@ -13,17 +13,13 @@ A program that captures and condenses the key moments from a video and summarise
 + BT18CSE137 - Ninad Dadmal<br/>
 + BT18CSE011 - Kartik Kshirsagar
 
-## Week 1 (31st Jan - 6th Feb) : Get to know about existing models that are used for video summarisation
-### Currently Assigned topics to study:
-LSTM -> Kunal,Nitin,Rishu,Aryan
-\
-GAN  -> Dhruv,Suhrid,Chinmay
-\
-FCSN -> Kartik,Ninad,Karan
 
 ## Techniques used:
++ **Random Frame from N-Frame window**
++ **K-frames from a N-frame window**
 + **N Frame Histogram Summarisation**
 + **Histogram and Spatial distance**
++ **Background estimation technique**
 + **Summarisation using subtitles**
 
 
