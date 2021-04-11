@@ -14,7 +14,7 @@ A program that captures and condenses the key moments from a video and summarise
 + BT18CSE011 - Kartik Kshirsagar
 
 
-## Techniques used:
+## Models Created:
 + **Random Frame from N-Frame window**
 + **K-frames from a N-frame window**
 + **N Frame Histogram Summarisation**
