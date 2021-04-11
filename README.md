@@ -14,6 +14,7 @@
 * [Aryan Patil (BT18CSE096)](https://github.com/aryanpatil)
 * [Ninad Dadmal (BT18CSE137)](https://github.com/Ninad10code)
 
+**Github Webpage Link : Click [here](https://dsdroid1.github.io/Video-Summarizer/)**
 
 ## The following models showcase different methodologies to demonstrate Video Summarisation:
 + **Models based on observations and statistics (conditional models,do not generalize well,just as a basic attempt)**
