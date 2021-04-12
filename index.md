@@ -72,3 +72,7 @@ This model uses general CV techniques to estimate the background in the video, a
 The input program tries to extract the subtitles from the audio sample attached with the video and then uses Natural Language Processing to determine important time stamps in subtitles and consequently audio to generate list of important blocks which are then coalesced into a single summarised video
   + One of the generated summary: \
     ![summarized example](./videoGifs/1.gif)
+
+*Machine learning models do help improve the accuracy, but most models are supervised, i.e. they require labelled data.Take an example of a LSTM model used for video summarization with classifying frames as 0/1 based on to be picked in the summary or not. Here, a large dataset of videos would be required, and each video will have many possible summaries(as there is no single correct summary).To generate labelled data for such a task is not easy, and would take a lot of manual effort. Also, training such an LSTM model would take large amount of time, even with the help of GPUs.Thus, we conclude that an LSTM model can perform well, but has a lot of practical considerations that we were not able to meet.*
+
+*Another important technique(and probably the best yet) is to use unsupervised learning via GAN based models, coupled with LSTM.(Genretaive Adversarial Networks). They train a Generator which tries to generate a summary and a classifier which classifies the generated summary as good or bad.This training is alternated and if properly proceeded, both models become good in their respective tasks.*
